@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: order-service
+
+ghtk:
+  api:
+    base-url: ${GHTK_API_BASE_URL:http://localhost:8081}
+
+resilience4j:
+  retry:
+    instances:
+      ghtkClient:
+        max-attempts: 3
+        wait-duration: 2s
+        retry-exceptions:
+          - java.util.concurrent.TimeoutException
+        ignore-exceptions:
+          - java.lang.IllegalArgumentException
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,retries,retryevents
+
