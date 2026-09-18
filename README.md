@@ -1,10 +1,5 @@
 # SS12 HW05 - Circuit Breaker hay Retry Pattern?
 
-**Sinh viên:** Trương Hà Cẩm Linh
-
-**Lớp:** IT214
-
-**Mã sinh viên:** PTIT056
 
 ## 1. Bối cảnh
 
